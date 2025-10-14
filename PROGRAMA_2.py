@@ -7,16 +7,8 @@
 # ================================================================
 
 # Importación de librerías necesarias
-try:
-    import pandas as pd              # Librería para manipulación de datos
-except ImportError:
-    raise SystemExit("El módulo 'pandas' no está instalado. Instálalo con: pip install pandas")
-
-try:
-    import dask.dataframe as dd      # Librería para procesamiento de datos grandes
-except ImportError:
-    raise SystemExit("El módulo 'dask' no está instalado. Instálalo con: pip install 'dask[complete]'")
-
+import pandas as pd              # Librería para manipulación de datos
+import dask.dataframe as dd      # Librería para procesamiento de datos grandes
 import time                      # Para medir tiempos de ejecución
 import requests                  # Para descargar el archivo desde una URL
 import os                        # Para manejar rutas y verificar archivos
