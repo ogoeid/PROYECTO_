@@ -1,0 +1,31 @@
+
+def _pyspark():
+    """
+    como seria, muestra de lo que seria el codigo en pyspark
+    """
+    print("\n" + "="*50)
+    print("EJEMPLO DE CÓDIGO(compraracion)")
+    print("="*50)
+    
+    codigo_pyspark = """
+# Para ejecutar esto, se necesita una instal de Java y Spark.(por ahora eso es lo necesario)
+# from pyspark.sql import SparkSession
+# from pyspark.sql.functions import col, avg, to_date
+# spark = SparkSession.builder.appName("AirQualitySpark").getOrCreate()
+
+# # lectura del csv para el spark.manejo de decimales con ','
+# # puede requerir filtrar data.(segun la guia(video))
+# df_spark = spark.read.csv(
+#     r'C:\\Users\\diego\\Desktop\\PROYECTO_\\datos\\ejer_3\\AirQualityUCI.csv',
+#     header=True,
+#     sep=';',
+#     inferSchema=True
+# ).replace(-200, None) # Reemplazar -200 por nulos
+
+# # convertir columna de fecha y agrupar /utilizar la misma locacion de benceno 
+# df_spark = df_spark.withColumn('Date', to_date(col('Date'), 'dd/MM/yyyy'))
+# media_diaria_benceno_spark = df_spark.groupBy('Date').agg(avg('C6H6(GT)').alias('media_benceno'))
+
+# print("Resultado de PySpark (media diaria de Benceno):")
+# media_diaria_benceno_spark.orderBy('Date', ascending=False).show(5)
+# spark.stop()
