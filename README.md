@@ -1,4 +1,5 @@
 integrantes:
+
 -Diego Parra| organizador de git/verificador de que el codigo funcione 
 -Gabriel Hernández|investigador de tarea/compilador de datos para lograr lo propuesto
 requerimientos del ambiente / con pip freeze logre que me de esto:
