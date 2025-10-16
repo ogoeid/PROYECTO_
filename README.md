@@ -79,7 +79,7 @@ plan semana a semana:
 -semana 2:analisis de proyecto/que hacer/lograr ilustrar
 -semana 3:recoleccion de data
 -semana 4:prosesamiento/filtracion de esta 
--semana 5:preparacion de informe en torno a la data obtenida 
--semana 6:preparacion de ppt/exposicion 
--semana 7:
--semana 8:
+-semana 5:escalabilidad de la propuesta
+-semana 6:preparacion de informe en torno a la data obtenida
+-semana 7:preparacion de ppt/exposicion 
+-semana 8:presentacion 
