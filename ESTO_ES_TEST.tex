@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PLANTILLA DE INFORME - INFB6052
+% Contenido adaptado del archivo INFORME_Big_Data (1).docx
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, a4paper]{article}
+
+% ====== PAQUETES ESENCIALES ======
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+% ====== CONFIGURACIÓN DE LA PÁGINA ======
+\geometry{a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=3cm}
+
+% ====== CONFIGURACIÓN DE LOS ENCABEZADOS Y PIES DE PÁGINA ======
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\lhead{INFB6052 - HERRAMIENTAS PARA CS. DE DATOS}
+% \rhead{\includegraphics[height=1cm]{logo_utem.png}} % Descomenta si tienes el logo
+\cfoot{\thepage}
+\lfoot{UNIVERSIDAD TÉCNICA METROPOLITANA}
+\rfoot{INFORME BIG DATA}
+
+% ==============================================================================
+% COMIENZO DEL DOCUMENTO
+% ==============================================================================
+\begin{document}
+
+% ====== PORTADA ======
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    
+    {\Huge \bfseries REPORTE DE PANORAMA ACTUAL DE BIG DATA Y SUS CASOS DE USO}
+    
+    \vspace{1.5cm}
+    
+    % --- Imagen de Portada ---
+    \includegraphics[width=0.8\textwidth]{big_data_cover.png}
+    
+    \vspace{2cm}
+    
+    {\large \bfseries GRUPO: 3} \\
+    \vspace{0.5cm}
+    {\large \bfseries Integrantes:} \\
+    {\large Gabriel Hernandez \\ Fransisco Provoste}
+    
+    \vfill % Empuja el contenido hacia abajo
+    
+    {\large \bfseries Profesor: [NOMBRE DEL PROFESOR]} \\ % <-- AÑADE EL NOMBRE
+    \vspace{0.5cm}
+    {\large 08 de octubre de 2025}
+    
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ==============================================================================
+% CONTENIDO DEL INFORME
+% ==============================================================================
+
+\section{Introducción: Marco Conceptual del Big Data}
+[cite_start]El presente documento constituye un análisis técnico-sistemático de las implementaciones de arquitecturas de \textbf{Big Data} y sus aplicaciones transversales en sectores de alto impacto socioeconómico, con énfasis en los ámbitos industrial y sanitario, tanto en contextos globales como locales. [cite: 142]
+
+[cite_start]La investigación se fundamenta en un marco metodológico basado en revisión bibliográfica especializada, estándares de la industria y documentación técnica actualizada, que permiten una caracterización rigurosa de esta tecnología como catalizador de transformación digital. [cite: 143]
+
+[cite_start]Desde una perspectiva de ingeniería de datos, se adopta la definición operativa propuesta por Annie Badman, que establece al Big Data como: [cite: 144]
+\begin{quote}
+[cite_start]“conjuntos de datos de volumen, variedad y velocidad tales que exceden las capacidades de procesamiento de los sistemas tradicionales de gestión de bases de datos. Su correcta captura, gestión y análisis mediante tecnologías distribuidas permite a las organizaciones extraer conocimiento accionable y optimizar procesos de decisión en tiempo cuasi-real.” [cite: 145]
+\end{quote}
+
+[cite_start]En este contexto, el estudio se estructura en torno a los siguientes objetivos técnicos específicos: [cite: 146]
+\begin{itemize}
+    [cite_start]\item Caracterizar el \textbf{ecosistema tecnológico del Big Data}, considerando componentes de ingestión, almacenamiento distribuido, procesamiento analítico y visualización. [cite: 147]
+    [cite_start]\item Documentar \textbf{patrones de implementación} en dominios sectoriales, con métricas de eficiencia operacional y retorno sobre inversión. [cite: 148]
+    [cite_start]\item Especificar las \textbf{tecnologías habilitadoras fundamentales} (frameworks de procesamiento distribuido, almacenes de datos NoSQL, plataformas en la nube). [cite: 149]
+    [cite_start]\item Analizar \textbf{casos de uso arquitectónicamente significativos} que demuestren escalabilidad, tolerancia a fallos y capacidades analíticas avanzadas. [cite: 150]
+    [cite_start]\item Evaluar los \textbf{desafíos de implementación} en dimensiones técnicas (escalabilidad, latencia, integración) y ético-legales (gobernanza de datos, cumplimiento normativo, privacidad). [cite: 151]
+\end{itemize}
+
+\section{Aplicaciones de Big Data en el Entorno Industrial}
+[cite_start]La adopción de tecnologías de \textbf{Big Data} se ha consolidado como un pilar estratégico en múltiples sectores productivos, entre los que destacan la \textbf{industria extractiva}, el \textbf{sistema financiero}, el \textbf{marketing digital} y el \textbf{sector salud}. [cite: 153]
+
+[cite_start]Estas industrias han incorporado arquitecturas de datos escalables que permiten la \textbf{captura, almacenamiento, limpieza y análisis de volúmenes masivos de información} en tiempo real o near-real time. [cite: 154] [cite_start]El uso de estas metodologías facilita la \textbf{automatización de procesos operativos}, la \textbf{identificación de patrones predictivos} y la \textbf{optimización de la cadena de valor}, lo que se traduce en una mejora sustancial en la eficiencia organizacional. [cite: 155]
+
+[cite_start]Un caso emblemático se observa en el ámbito del \textbf{marketing intelligence}, donde el análisis de big data permite la \textbf{segmentación hipergranular de audiencias}, la \textbf{personalización dinámica de contenidos} y la \textbf{evaluación en tiempo real del ROI} de las campañas. [cite: 157]
+
+\section{Tecnologías y Herramientas para Arquitecturas Big Data}
+[cite_start]El ecosistema tecnológico de Big Data está constituido por un conjunto de herramientas y plataformas especializadas, diseñadas para abordar el ciclo de vida completo de los datos masivos. [cite: 159]
+
+\subsection{Tecnologías Fundamentales}
+\begin{itemize}
+    \item \textbf{Apache Hadoop:} Framework para el procesamiento distribuido de grandes conjuntos de datos a través de clusters. [cite_start]Su arquitectura se basa en HDFS y MapReduce. [cite: 162, 163]
+    [cite_start]\item \textbf{Bases de Datos NoSQL (MongoDB, Cassandra):} Sistemas no relacionales diseñados para esquemas dinámicos y escalabilidad horizontal. [cite: 165]
+    [cite_start]\item \textbf{Machine Learning e IA:} Frameworks como TensorFlow, PySpark MLlib y Scikit-learn integrados en pipelines de Big Data permiten el desarrollo de modelos predictivos y sistemas de recomendación. [cite: 167]
+    [cite_start]\item \textbf{Plataformas en la Nube (AWS, Azure, Google Cloud):} Proveen infraestructura elástica y servicios gestionados que simplifican el despliegue de arquitecturas Big Data. [cite: 168]
+    [cite_start]\item \textbf{Herramientas de Visualización (Tableau, Power BI):} Soluciones de business intelligence para la construcción de dashboards interactivos y reportes automatizados. [cite: 169]
+\end{itemize}
+
+\subsection{Tecnologías Emergentes}
+\begin{itemize}
+    [cite_start]\item \textbf{Procesamiento en Tiempo Real:} Motores como Apache Storm, Flink y Kafka Streams para el análisis de flujos de datos continuos con baja latencia. [cite: 171]
+    [cite_start]\item \textbf{Data Lakes y Almacenes Modernos:} Repositorios como Amazon S3 y Azure Data Lake que permiten almacenar datos en su formato raw. [cite: 172]
+    [cite_start]\item \textbf{Automatización mediante IA:} Plataformas que incorporan IA generativa para la generación automática de consultas y detección de anomalías. [cite: 173]
+\end{itemize}
+
+\section{Casos de Uso Estratégicos en el Sector Salud Chileno}
+[cite_start]La implementación de Big Data ha catalizado transformaciones en múltiples sectores, optimizando la toma de decisiones. [cite: 175] [cite_start]Esta sección analiza casos de uso en el sistema de salud chileno, un referente regional en la generación y análisis de datos clínicos. [cite: 176]
+
+[cite_start]Chile ha establecido un ecosistema de salud digital robusto, liderado por instituciones como el \textbf{Centro Nacional en Sistemas de Información en Salud (CENS)}. [cite: 177] Las aplicaciones técnicas más relevantes incluyen:
+\begin{itemize}
+    [cite_start]\item \textbf{Diagnóstico Médico Asistido por Algoritmos:} Implementación de modelos de \textit{deep learning} para el análisis automatizado de imágenes médicas, permitiendo la detección temprana de patologías. [cite: 180]
+    [cite_start]\item \textbf{Optimización de la Gestión Hospitalaria:} Aplicación de \textit{process mining} para modelar flujos de pacientes, optimizando la asignación de recursos y reduciendo tiempos de espera. [cite: 181]
+    [cite_start]\item \textbf{Investigación Clínica Translacional:} Utilización de plataformas para integrar y analizar grandes volúmenes de datos ómicos, acelerando la identificación de biomarcadores. [cite: 182]
+    [cite_start]\item \textbf{Modelos Predictivos para Salud Pública:} Desarrollo de sistemas de alerta temprana basados en \textit{machine learning} para predecir brotes infecciosos. [cite: 183]
+\end{itemize}
+
+[cite_start]Como evidencia, el siguiente gráfico ilustra la correlación entre la implementación de estas tecnologías y la mejora en indicadores de eficiencia clínica. [cite: 184]
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{grafico_proyectos.png}
+    \caption{Aumento proyectado en la cantidad de proyectos de Big Data aplicados al sector salud en Chile (2020-2025).}
+    \label{fig:grafico_proyectos}
+\end{figure}
+
+\section{Desafíos Técnicos, Éticos y Normativos}
+[cite_start]Si bien Big Data ofrece capacidades transformadoras, su adopción presenta desafíos que deben abordarse de manera integral. [cite: 187]
+\begin{enumerate}
+    [cite_start]\item \textbf{Privacidad y Confidencialidad de Datos Sensibles:} La naturaleza expansiva de las fuentes de datos amenaza la privacidad individual, especialmente en sectores como la salud. [cite: 189, 190]
+    [cite_start]\item \textbf{Sesgos Algorítmicos y Equidad en IA:} Los modelos de machine learning pueden perpetuar y amplificar sesgos históricos presentes en los datos de entrenamiento, creando riesgos de discriminación. [cite: 192, 193]
+    [cite_start]\item \textbf{Gobernanza de Datos y Cumplimiento Normativo:} Normativas como la \textbf{Ley 19.628} en Chile exigen consentimiento informado y mecanismos de transparencia para el uso de datos. [cite: 196]
+    [cite_start]\item \textbf{Escalabilidad e Interoperabilidad Técnica:} La integración de flujos de datos heterogéneos representa un desafío de ingeniería significativo. [cite: 197]
+    [cite_start]\item \textbf{Sostenibilidad y Costos Computacionales:} El procesamiento de volúmenes masivos de datos conlleva demandas energéticas y costos operativos elevados. [cite: 199]
+\end{enumerate}
+[cite_start]La superación de estos desafíos exige un enfoque multidisciplinario que combine expertise técnico, jurídico y ético. [cite: 201]
+
+\section{Conclusiones y Perspectivas Futuras}
+[cite_start]El análisis demuestra que el \textbf{Big Data} se ha consolidado como un componente estructural clave en los procesos de transformación digital, con un impacto significativo en el \textbf{sector salud}. [cite: 203] [cite_start]En el contexto chileno, su adopción ha permitido avances en la \textbf{eficiencia operativa} y el desarrollo de \textbf{modelos predictivos}. [cite: 204]
+
+[cite_start]No obstante, la implementación conlleva desafíos como la \textbf{protección de datos sensibles}, la \textbf{mitigación de sesgos algorítmicos} y el cumplimiento de marcos normativos. [cite: 206] [cite_start]El futuro del Big Data dependerá de la capacidad de integrar estas tecnologías bajo un enfoque \textbf{ético, seguro y centrado en el usuario}. [cite: 207]
+
+\end{document}

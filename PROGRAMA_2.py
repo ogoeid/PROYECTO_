@@ -13,12 +13,9 @@ import time                      # Para medir tiempos de ejecución
 import requests                  # Para descargar el archivo desde una URL
 import os                        # Para manejar rutas y verificar archivos
 import matplotlib.pyplot as plt   # Para graficar resultados
-
-try:
-    from memory_profiler import memory_usage  # Para medir el uso de memoria
-except ImportError:
-    # memory_profiler no está disponible: usar un fallback simple que ejecuta la función y devuelve 0.0
-    def memory_usage(callable_or_tuple, interval=0.5, **kwargs):
+from memory_profiler import memory_usage
+ # memory_profiler no está disponible: usar un fallback simple que ejecuta la función y devuelve 0.0
+def memory_usage(callable_or_tuple, interval=0.5, **kwargs):
         if isinstance(callable_or_tuple, tuple):
             func, args = callable_or_tuple
             func(*args)
