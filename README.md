@@ -1,6 +1,6 @@
 integrantes:
--diego parra aravena
--
+-Diego Parra| organizador de git/verificador de que el codigo funcione 
+-Gabriel Hernández|investigador de tarea/compilador de datos para lograr lo propuesto
 requerimientos del ambiente / con pip freeze logre que me de esto:
 asttokens==3.0.0
 bokeh==3.8.0
